@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<launch>
+
+	<!-- ALL VISUALIZATION NODES GETS LAUNCHED HERE -->
+	
+	<group name = "visualizing nodes">
+	
+		<include file="$(find turtlebot3_gazebo)/launch/turtlebot3_house_scenario1.launch" arg="waffle"/> 
+		<include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch" args="$(find turtlebot3_navigation)/maps/building4.yaml" arg="waffle"/> 
+		
+	 	</group>
+
+	<!-- ALL PROCESSING NODES GETS LAUNCHED HERE -->
+	
+	<group name = "cloud processing nodes">
+	
+		<node pkg="testrobots" name= "Human_Detection" type="human_detection.py"/>
+
+		<env name="GMON_OUT_PREFIX" value="organize" />
+		<node pkg = "testrobots" name= "cloud_processing" type = "organize" />	
+
+		<node pkg="testrobots" name= "CLUSTERING_PREDICTION" type="new_kf.py"/> -->
+	 
+	 </group>
+
+	
+
+	<!-- ALL NAVIGATION NODES GETS LAUNCHED HERE -->
+	 	
+	<group name = "navigation nodes">	 		
+		
+	 	<node pkg="testrobots" name= "navigation" type="goal.py"/>
+	 	
+	 </group>
+
+	
+	 	
+	<!-- ALL MONITORING NODES GETS LAUNCHED HERE -->
+	 
+	<group name = "monitoring nodes">
+	 	
+	 	<node name="monitor_plot1" pkg="rqt_plot" type="rqt_plot" args=" /eventually_dist1 /eventually_dist2  /halting_h1 /halting_h2  "/>
+    	<node name="monitor_plot2" pkg="rqt_plot" type="rqt_plot" args="  /human_h1 /human_h2 "/>
+	 	
+	</group>
+
+	<include file="$(find cpu_monitor)/launch/cpu_monitor.launch">
+    <arg name="poll_period" value="2.0"/>
+  	</include>
+
+
+</launch>
