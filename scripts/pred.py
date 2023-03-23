@@ -267,11 +267,7 @@ class Prediction(object):
             
             
             #start db scan:
-<<<<<<< HEAD
-            DBSCAN_cluster = DBSCAN(eps=0.5, min_samples=29).fit(xz_np_array) #0.5, 30
-=======
             DBSCAN_cluster = DBSCAN(eps=0.5, min_samples=25).fit(xz_np_array) #0.5, 30
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
             labels = DBSCAN_cluster.labels_
             components = DBSCAN_cluster.components_ #copy of each core sample found by training
             feature = DBSCAN_cluster.n_features_in_ #number of features seen during fit
@@ -312,11 +308,7 @@ class Prediction(object):
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore", category=RuntimeWarning)
                 
-<<<<<<< HEAD
-                  
-=======
                 # if np.nanmean(x1) != float(nan):     
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
                 if np.all(np.isnan(x1)) :
                     
                     print("no human")
@@ -361,15 +353,9 @@ class Prediction(object):
                     Human_Marker_cube1.ns = "basic_shapes_1"
                     Human_Marker_cube1.id = 1
                     Human_Marker_cube1.type = 1
-<<<<<<< HEAD
-                    Human_Marker_cube1.pose.position.x = meanx1  
-                    Human_Marker_cube1.pose.position.y = 0.0
-                    Human_Marker_cube1.pose.position.z = meanz1 
-=======
                     Human_Marker_cube1.pose.position.x = meanx1 #pos1_trans[0] #meanx1 
                     Human_Marker_cube1.pose.position.y = 0.0
                     Human_Marker_cube1.pose.position.z = meanz1 #pos1_trans[1]#meanz1 
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
                     Human_Marker_cube1.pose.orientation.x = 1.0
                     Human_Marker_cube1.pose.orientation.y = 1.0
                     Human_Marker_cube1.pose.orientation.z = 0.0
@@ -491,13 +477,8 @@ class Prediction(object):
               
                     #publish current human position
                     position_msg2.header = data.header
-<<<<<<< HEAD
-                    position_msg2.x = meanx2 
-                    position_msg2.z = meanz2 
-=======
                     position_msg2.x = meanx2 #pos2_trans[0] #meanx2
                     position_msg2.z = meanz2 #pos2_trans[1] #meanz2
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
                     self.pose_human2.publish(position_msg2)
                     
                     #create marker at current mean position of human:
