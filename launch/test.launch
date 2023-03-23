@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+	
+        <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_house_scenario1.launch" arg="waffle"/> 
+		<include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch" args="$(find turtlebot3_navigation)/maps/building4.yaml" arg="waffle"/> 
+		<node pkg="testrobots" name= "Human_Detection" type="human_detection.py"/>
+		<node pkg = "testrobots" name= "cloud_processing" type = "organize" />		
+		<node pkg="testrobots" name= "CLUSTERING_PREDICTION" type="new_kf.py"/> -->
+	 
+	
+
+</launch>
