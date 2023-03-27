@@ -1,23 +1,23 @@
 <?xml version="1.0"?>
 <package format="2">
-<<<<<<< HEAD
+
   <name>testrobots</name>
   <version>0.0.0</version>
   <description>The testrobots package</description>
-=======
+
   <name>my_pkg</name>
   <version>0.0.0</version>
   <description>The my_pkg package</description>
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
+
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-<<<<<<< HEAD
+
   <maintainer email="avhi@todo.todo">avhi</maintainer>
-=======
+
   <maintainer email="apramani@todo.todo">apramani</maintainer>
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
+
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -29,11 +29,10 @@
   <!-- Url tags are optional, but multiple are allowed, one per tag -->
   <!-- Optional attribute type can be: website, bugtracker, or repository -->
   <!-- Example: -->
-<<<<<<< HEAD
+
   <!-- <url type="website">http://wiki.ros.org/testrobots</url> -->
-=======
+
   <!-- <url type="website">http://wiki.ros.org/my_pkg</url> -->
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
@@ -51,21 +50,21 @@
   <!--   <build_depend>roscpp</build_depend> -->
   <!--   <exec_depend>roscpp</exec_depend> -->
   <!-- Use build_depend for packages you need at compile time: -->
-<<<<<<< HEAD
+
     <!-- <build_depend>message_generation</build_depend> -->
-=======
+
   <!--   <build_depend>message_generation</build_depend> -->
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
+
   <!-- Use build_export_depend for packages you need in order to build against this package: -->
   <!--   <build_export_depend>message_generation</build_export_depend> -->
   <!-- Use buildtool_depend for build tool packages: -->
   <!--   <buildtool_depend>catkin</buildtool_depend> -->
   <!-- Use exec_depend for packages you need at runtime: -->
-<<<<<<< HEAD
+
     <!-- <exec_depend>message_runtime</exec_depend> -->
-=======
+
   <!--   <exec_depend>message_runtime</exec_depend> -->
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
+
   <!-- Use test_depend for packages you need only for testing: -->
   <!--   <test_depend>gtest</test_depend> -->
   <!-- Use doc_depend for packages you need only for building documentation: -->
@@ -74,7 +73,7 @@
   <build_depend>roscpp</build_depend>
   <build_depend>rospy</build_depend>
   <build_depend>std_msgs</build_depend>
-<<<<<<< HEAD
+
   <build_depend>geometry_msgs</build_depend>
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>rospy</build_export_depend>
@@ -109,7 +108,7 @@
   <exec_depend>tf2_eigen</exec_depend>
   <exec_depend>tf2_geometry_msgs</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
-=======
+
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
@@ -118,7 +117,7 @@
   <exec_depend>std_msgs</exec_depend>
 
 
->>>>>>> c9a6cac67ff155255afda8a438b47be92a6705f4
+
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
