@@ -2,21 +2,12 @@
 
 ## Install the following packages:
 
-1) Download the github repository in ~your_ws/src
-2) Save the yolo.cfg and yolo.weights inside ~your_ws/src/my_pkg/src/my_pkg/scripts/ 
+1) Download the github repository in ~your_ws/src/testrobots
+2) Save the yolo.cfg and yolo.weights inside ~your_ws/src/testrobots/scripts/ 
 3) catkin_make
 4) pip install -U scikit-learn
 5) Download the additional turtlebot3 folders inside ~your_ws/src/
 
-
-
-# Install the following packages:
-
-1) Download the github repository 
-2) Do Catkin_make 
-3) Copy the Darknet and yolo.weights inside test_catkin/src/testrobots/scripts
-4) pip install -U scikit-learn
-5) Download the additional turtlebot3 and rtamt folders inside test_catkin/src  -
 
 
 
@@ -30,11 +21,11 @@ https://github.com/ROBOTIS-GIT/turtlebot3_msgs
 
 
 
-1)Copy the turtlebot3 folders inside the testcatkin/src folder
+1)Copy the turtlebot3 folders inside the your_ws/src folder
 
-2)Go to src/turtlebot3/turtlebot3_navigations/maps and change the image parameter in
+2)Go to your_ws/src/turtlebot3/turtlebot3_navigations/maps and change the image parameter in
 building4.yaml to
-/home/$YOURDIRECTORY$/testrobot/test_catkin/src/turtlebot3/turtlebot3_navigation/maps/building4.pgm
+/home/$YOURDIRECTORY$/your_ws/src/turtlebot3/turtlebot3_navigation/maps/building4.pgm
 
 3)Do Catkin_make to check everything is working fine.
 ```
