@@ -263,7 +263,7 @@ link_directories(
 # )
 
 
-catkin_install_python(PROGRAMS  scripts/pred.py scripts/pred2.py  scripts/goal.py scripts/human_detection.py  scripts/monitor.py
+catkin_install_python(PROGRAMS  scripts/pred.py  scripts/goal.py scripts/human_detection.py  scripts/monitor.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
