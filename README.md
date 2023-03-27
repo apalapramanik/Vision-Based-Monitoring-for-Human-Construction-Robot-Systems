@@ -34,8 +34,7 @@ https://github.com/ROBOTIS-GIT/turtlebot3_msgs
 
 2)Go to src/turtlebot3/turtlebot3_navigations/maps and change the image parameter in
 building4.yaml to
-/home/$YOURDIRECTORY$/testrobot/test_catkin/src/turtlebot3/turtlebot3_navigation/maps/b
-uilding4.pgm
+/home/$YOURDIRECTORY$/testrobot/test_catkin/src/turtlebot3/turtlebot3_navigation/maps/building4.pgm
 
 3)Do Catkin_make to check everything is working fine.
 ```
