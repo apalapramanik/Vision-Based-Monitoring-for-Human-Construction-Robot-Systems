@@ -43,6 +43,8 @@ import cv2
 from visualization_msgs.msg import Marker, MarkerArray
 from testrobots.msg import position
 from testrobots.msg import Plot
+from testrobots.msg import ListStamped
+from std_msgs.msg import Float32
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 import warnings
@@ -114,7 +116,7 @@ class Prediction(object):
         self.prediction_marker1 = rospy.Publisher("Prediction_marker_h1", Marker, queue_size=10)
         self.pose_human1 = rospy.Publisher("position_h1", position,queue_size=10)
         self.pred_human1 = rospy.Publisher("prediction_h1", position,queue_size=10)
-        self.pred1_array = rospy.Publisher("pred1_array",Float32MultiArray,queue_size=10)
+        self.pred1_array = rospy.Publisher("pred1_array",ListStamped,queue_size=10)
       
         
         #human2 publishers
@@ -122,7 +124,7 @@ class Prediction(object):
         self.prediction_marker2 = rospy.Publisher("Prediction_marker_h2", Marker, queue_size=10)
         self.pose_human2 = rospy.Publisher("position_h2", position,queue_size=10)
         self.pred_human2 = rospy.Publisher("prediction_h2", position,queue_size=10)
-        self.pred2_array = rospy.Publisher("pred2_array",Float32MultiArray,queue_size=10)
+        self.pred2_array = rospy.Publisher("pred2_array",ListStamped,queue_size=10)
        
         
         #human3 publishers
@@ -130,7 +132,10 @@ class Prediction(object):
         self.prediction_marker3 = rospy.Publisher("Prediction_marker_h3", Marker, queue_size=10)
         self.pose_human3 = rospy.Publisher("position_h3", position,queue_size=10)
         self.pred_human3 = rospy.Publisher("prediction_h3", position,queue_size=10)
-        self.pred3_array = rospy.Publisher("pred3_array",Float32MultiArray,queue_size=10)
+        self.pred3_array = rospy.Publisher("pred3_array",ListStamped,queue_size=10)
+        
+        #safety distance:
+        self.safe_dist = rospy.Publisher("safety", Float32,queue_size=10)
        
         
     def indicator_callback(self, data) :
@@ -210,21 +215,26 @@ class Prediction(object):
             prediction1 = Marker()
             position_msg1 = position()
             prediction_msg1 = position()
-            pred1_array_msg = Float32MultiArray()
+            pred1_array_msg = ListStamped()
           
             
             Human_Marker_cube2 = Marker()
             prediction2 = Marker()
             position_msg2 = position()
             prediction_msg2 = position()
-            pred2_array_msg = Float32MultiArray()
+            pred2_array_msg = ListStamped()
          
             
             Human_Marker_cube3 = Marker()
             prediction3 = Marker()
             position_msg3 = position()
             prediction_msg3 = position()
-            pred3_array_msg = Float32MultiArray()
+            pred3_array_msg = ListStamped()
+            
+            #publish minimum safe distance to be maintained
+            safety_msg = Float32()
+            safety_msg.data = 1.25
+            self.safe_dist.publish(safety_msg)
           
            
             

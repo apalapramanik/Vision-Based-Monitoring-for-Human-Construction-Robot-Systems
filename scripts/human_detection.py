@@ -21,6 +21,7 @@ from testrobots.msg import Plot
 
 from timeit import default_timer as timer
 from datetime import timedelta
+from std_msgs.msg import Float32
 
 
 
@@ -51,6 +52,7 @@ class Detection(object):
         self.vector_pub = rospy.Publisher("H_Vector", Image, queue_size=1)      
         self.boundingbox = rospy.Publisher("BBox", Boundingbox, queue_size=1)
         self.depth_with_BB = rospy.Publisher("DepthBB", Image, queue_size=100, latch=True)
+        
         
         #initialize csv file
         self.path = os.getcwd()
@@ -99,6 +101,8 @@ class Detection(object):
         and returns new image with detection and 
         human_flag which turns true if the human is detected
         '''
+        
+        
         # defining msgs for publishing
         msg = Plot()
         msg.value = -1

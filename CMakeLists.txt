@@ -14,6 +14,7 @@ set(catkin_LIBRARIES ${catkin_LIBRARIES} -pg)
 ## is used, also find other catkin packages
 find_package(Eigen3 REQUIRED)
 
+
 #Eigen 3.2 (Wily) only provides EIGEN3_INCLUDE_DIR, not EIGEN3_INCLUDE_DIRS
 
 if(NOT EIGEN3_INCLUDE_DIRS)
@@ -85,6 +86,11 @@ add_message_files(
   Boundingbox.msg
   Plot.msg
   distance.msg
+  BooleanStamped.msg
+  FloatStamped.msg
+  IntegerStamped.msg
+  Sample.msg
+  ListStamped.msg
 
   
 )
